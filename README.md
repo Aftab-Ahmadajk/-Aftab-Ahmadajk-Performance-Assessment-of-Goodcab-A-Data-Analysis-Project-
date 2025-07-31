@@ -47,7 +47,7 @@ The core table, fact_trips, was enriched with detailed attributes including trip
 ## **``Data Modeling``**
 For this analysis, I worked with eight data tables, which provided sufficient information to carry out a comprehensive data analysis without the need for any additional sources. After developing a strong understanding of the dataset, I designed a relational data model by establishing one-to-many relationships among the relevant tables. While the data model was built using one-to-many relationships, DAX measures were created across multiple tables to align with the logical structure of the analysis. At the core of this model is the fact table, “fact_trips”, which serves as the central component for generating meaningful and actionable insights.
 
-![Sample Image](./Images/Starschema.jpg)
+![Sample Image](./Images/StarSchema.jpg)
 
 ## **``Data Analysis``**
 I conducted a comprehensive analysis using Powerbi to address the primary and secondary questions posed by the stakeholders. During this process, I identified several key insights that were instrumental in answering these critical questions.
