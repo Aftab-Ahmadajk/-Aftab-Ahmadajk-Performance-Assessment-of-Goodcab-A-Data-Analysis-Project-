@@ -200,7 +200,7 @@ several factors contribute to higher or lower Repeat Passenger Rates (RPR%) acro
 **Correlation**: High service quality → Higher repeat travel.
 
 #### Pricing Efficiency
-- aipur, Mysore, and Kochi lead in pricing efficiency, which reflects value for money (fare per km).
+- Jaipur, Mysore, and Kochi lead in pricing efficiency, which reflects value for money (fare per km).
 - These cities also align with higher customer satisfaction and repeat trip frequencies, indicating that competitive pricing paired with quality contributes to loyalty.
 **Correlation**: Optimized fare structures → Better retention.
 
