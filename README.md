@@ -30,8 +30,8 @@ The stakeholders for this comprehensive data assessment report are as follows:
 The dataset has been sourced from the Codebasics website. Data for this assement analysis is open access to the public for data analysis and insight generation, making it a valuable educational resource. You can access the data [here](https://codebasics.io/challenge/codebasics-resume-project-challenge). 
 
 ## **``Data Model``**:
-The model utilizes a centralized fact table (fact_trips) connected to dimension tables for City, Date, and Repeat Trip Distribution, integrated with a secondary database for Monthly Targets.
-![Sample Image](./Images/Starschema.jpg)
+I engineered this Galaxy Schema to integrate multiple fact tables, such as fact_trips and monthly_target_trips, by anchoring them to shared dimensions like dim_city and dim_date. This architecture bridges disparate data granularities, enabling stakeholders to seamlessly compare daily operational performance against high-level monthly business targets within a single, unified view.
+![Sample Image](./Images/Model-1.png)
 
 
 ## **``Key Insights ``**:
