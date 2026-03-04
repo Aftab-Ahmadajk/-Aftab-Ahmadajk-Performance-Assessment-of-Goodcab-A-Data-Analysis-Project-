@@ -3,51 +3,84 @@
 ## Date:            29 July, 2025
 ## Contact:         aftabajk@gmail.com
 
-## **``Introduction``**:
-**Goodcab** is a Transportation & Mobility Company established two years ago, that has gained a strong foothold in the Indian market by focusing on tier-2 cities. Goodcab is committed to supporting local drivers while ensuring excellent service to passengers accross the various cities. Goodcab has set ambitious performance targets for 2024 to drive growth and improve passenger satisfaction. 
+## **``Project Introduction``**:
+This project analyzes the operational performance of Goodcabs, a specialized cab service provider focused on Indian **Tier-2** cities. Over a six-month period, I evaluated trip efficiency, passenger loyalty, and target achievement across 10 diverse urban markets to drive the company’s 2024 growth strategy.
 
- As part of this initiative, the Goodcabs management team aims to assess the company's performance across key metrics, In this context I conducted a comprehensive in-depth analysis of the company's performance across key metrics. To facilitate data transformation, data cleaning, data manipulation, data analysis and data visualization throughout this process, I utilized Microsoft Power BI as my primary tool.
+## **``Business Context``**:
+Established a years ago, Goodcabs differentiates itself by supporting local drivers in their hometowns while providing sustainable transit options. Operating in cities like Jaipur (Tourism) and Surat (Industrial), the company faces unique seasonal and socio-economic demand patterns.
 
-## **``Objectives``**:
-As part of this initiative, the Goodcabs management team aims to assess the company's performance across key metrics, including trip volume, passenger satisfaction, repeat passenger rate, trip distribution and the balance between new and repeat passengers. To do so, a comprehensive analysis of the Goodcabs six month data for assess the key metrics as mentioned above which are very helpful to uncover actionable insights and strategic recommendations.
+## **``Business Problem``**
+The Chief of Operations (COO) required an immediate, comprehensive performance assessment. The core challenge was identifying why certain cities consistently missed growth targets despite high overall trip volumes, and addressing a **14.6% revenue** contraction observed in June 2024.
 
-### **Stakeholders**:
+## **``Objectives``**
+- Identify top and bottom-performing cities by trip volume and revenue.
+- A nalyze the Repeat Passenger Rate (RPR%) and its correlation with service quality.
+- Evaluate Target vs. Actual performance for trips, new passengers, and ratings.
+- Provide data-backed recommendations for fleet reallocation and pricing optimization.
+
+### **``Stakeholders``**:
 The stakeholders for this comprehensive data assessment report are as follows:
+- **Bruce Haryali** Primary stakeholder requiring evidence to reallocate fleet resources and recalibrate 2025 growth targets.
+- **Aftab Ahmad (Data Professional**): Responsible for transforming six months of raw operational data into a cohesive, actionable executive narrative.
 
-- **Bruce Haryali** Chief of Operation wanted this assessment report immediately , but the Analytics Manager Tony is engaged on another critical report.Tony decided to give this work to Aftab Ahmad who is the curious data analyst of Goodcabs.
-- **Data Professional at Goodcabs** Aftab Ahmad is solely responsible for gathering, analyzing, and interpreting six month performance data to provide actionable insights and support the objectives of this assessment.
-
-## **``Data Source``**:
+## **``Data & Analytical Approach``**
+- **Tools**: Power BI, and Excel, for advanced correlation analysis.
+- **Methodology**: Used a Star Schema to join trip details with monthly targets. Performed variance analysis and correlation mapping between distance, fare, and satisfaction.
+- **Data Source**:
 The dataset has been sourced from the Codebasics website. Data for this assement analysis is open access to the public for data analysis and insight generation, making it a valuable educational resource. You can access the data [here](https://codebasics.io/challenge/codebasics-resume-project-challenge). 
 
-## **``Data Description``**:
-The project utilized eight CSV files:
-- city_target_passenger_rating
-- dim_city
-- dim_date
-- dim_repeat_trip_distribution
-- fact_passenger_summary
-- fact_trips
-- monthly_target_new_passengers
-- monthly_target_trips
+## **``Data Model``**:
+The model utilizes a centralized fact table (fact_trips) connected to dimension tables for City, Date, and Repeat Trip Distribution, integrated with a secondary database for Monthly Targets.
 
-## **``Data Cleaning``**:
-I collected eight data files in comma-separated tab format. The data is efficient for meningful insights. I performed comprehensive data cleaning on the eight CSV files. Key issues identified included:
-- **File Naming Inconsistency**: For example, dim_repeat_trip_distribution had a naming issue that was standardized.
-- **Data Type Mismatch**: The trip_count column was stored as text, and the entries were not in ascending order. I padded trip counts with leading zeros to maintain proper order and consistency.
-- **Missing/ Duplicate Values**: A thorough check was conducted to confirm there were no missing or duplicate records.
-These cleaning steps ensured the dataset was reliable and analysis-ready.
+## **``Key Insights ``**:
+- **The Tourism-Business Paradox**: Jaipur (77K trips) dominates volume but has low loyalty (25.7% RPR), while Surat (55K trips) has lower volume but leads the portfolio in loyalty (49.9% RPR).
+- **Quality-Distance Divergence**: Repeat passengers rate long-distance trips significantly lower than new passengers, indicating a service-quality fatigue issue on high-value routes.
+- **The June Slump**: A portfolio-wide **14.6% revenue drop** in June highlights a critical over-reliance on seasonal tourism demand.
+- **Systemic Target Misses**: Industrial hubs **Lucknow** and **Vadodara** failed to hit a single monthly trip target, signaling a need for a re-entry or localized pricing strategy.
+- **The Loyalty Peak**: Every city reached its maximum RPR% in **May**, suggesting a successful mid-year loyalty push or a seasonal shift in user behavior.
+- **New Passenger Deficit**: We achieved a **95.6% rate** for new passengers, falling **8,000 users short** of the 185K strategic growth goal.
+- **Efficiency Outlier**: **Mysore** maintains excellent pricing efficiency (high fare relative to distance) despite having the lowest trip volume in the portfolio.
 
-## **``Data Exploration & Preparation``**:
+## **``Strategic Recommendations``**:
+- **Implement Tiered "Commuter Passes"**: In high-RPR cities like **Surat** and **Lucknow**, offer monthly subscriptions to lock in the daily professional base.
+- **Launch "Quality Revival" in Industrial Hubs**: Specifically target **Vadodara** and **Lucknow** with driver-training programs to bridge the **~10% rating deficit** currently threatening retention.
+- **Dynamic Fleet Reallocation**: Move surplus vehicles from tourism hubs to business centers during the "June Slump" to stabilize off-peak revenue.
+- **Pilot EV Long-Haul Routes**: Deploy Electric Vehicles for trips over 20km in **Jaipur** and **Kochi** to improve unit margins and address declining ratings on long distances.
+- **Cross-City Tourist Loyalty**: Incentivize users who travel in **Jaipur** to use Goodcabs when they return to their home cities like Indore or Chandigarh.
+- **B2B Partnership Integration**: Partner with hotels in **Mysore** and trade centers in **Surat** to establish "Goodcabs Kiosks" for zero-friction booking.
+- **Recalibrate H2 Targets**: Adjust benchmarks for **Lucknow** and **Vadodara** to reflect realistic market saturation while raising targets for the high-performing **Mysore** market.
 
-As part of the data preparation phase, I conducted an initial exploration to assess the structure, distribution, and quality of key variables such as trip counts, fares, passenger ratings, travel dates, and repeat travel patterns. This helped ensure that the data was analysis-ready and aligned with the business questions. To enable more effective time-series analysis and improve chronological sorting, a calculated column 'month_name' was added across relevant tables, including fact_trips and monthly_target_trips. This allowed for consistent monthly trend analysis and improved the clarity of visualizations. Another key calculated metric, Repeat Passenger Rate (RPR%), was introduced to evaluate customer retention at a granular level. This derived measure played a central role in understanding passenger loyalty behavior across cities and months.
+## **``Expected Business Impact``**:
+- **Retention**: 10–15% increase in RPR% through localized loyalty programs.
+- **Revenue**: Stabilization of seasonal fluctuations, reducing the Q2 revenue dip by an estimated 5–8%.
+- **Growth**: 100% target achievement in underperforming cities through recalibrated, data-driven benchmarks.
 
-The core table, fact_trips, was enriched with detailed attributes including trip distance, fare amount, trip ratings, and temporal components (month/year). These enhancements enabled deeper exploration of passenger behavior, regional trends, and performance benchmarking across dimensions.
-
-## **``Data Modeling``**
-For this analysis, I worked with eight data tables, which provided sufficient information to carry out a comprehensive data analysis without the need for any additional sources. After developing a strong understanding of the dataset, I designed a relational data model by establishing one-to-many relationships among the relevant tables. While the data model was built using one-to-many relationships, DAX measures were created across multiple tables to align with the logical structure of the analysis. At the core of this model is the fact table, “fact_trips”, which serves as the central component for generating meaningful and actionable insights.
-
+## **``Dashboard``**
+The Power BI dashboard features executive-level KPI cards, interactive heatmaps for peak demand, and scatter plots illustrating the correlation between trip distance and passenger satisfaction.
+**Goodcabs Trips Performance Analysis**
 ![Sample Image](./Images/StarSchema.jpg)
+
+**Goodcabs Passenger Performance Analysis**
+![Sample Image](./Images/StarSchema.jpg)
+
+**Goodcabs Targets & Achievements Analysis**
+![Sample Image](./Images/StarSchema.jpg)
+
+**Goodcabs Revenue Performance Analysis**
+![Sample Image](./Images/StarSchema.jpg)
+
+## **``Conclusion``**
+The analysis confirms that while Goodcabs has a strong foothold in Tier-2 cities, future success depends on transitioning from a **volume-led** to a **loyalty-led** model. By aligning operational supply with the specific "Functional DNA" of each city, Goodcabs can achieve its ambitious 2024 targets.
+
+Thank you for taking the time to read my analysis report on Goodcab Transportation & Mobility.
+
+I would greatly appreciate your feedback and suggestions regarding this analysis report on Goodcabs travel service. Your input is invaluable in helping me refine and improve my work. Please feel free to share your thoughts by emailing me at **aftabajk@gmail.com** or connecting with me on [LinkedIn](https://www.linkedin.com/in/aftab-ahmad-data-analyst/)
+
+
+
+
+
+
 
 ## **``Data Analysis``**
 I conducted a comprehensive analysis using Powerbi to address the primary and secondary questions posed by the stakeholders. During this process, I identified several key insights that were instrumental in answering these critical questions.
