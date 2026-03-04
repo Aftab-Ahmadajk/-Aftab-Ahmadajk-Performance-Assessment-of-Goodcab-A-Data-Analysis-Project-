@@ -31,6 +31,8 @@ The dataset has been sourced from the Codebasics website. Data for this assement
 
 ## **``Data Model``**:
 The model utilizes a centralized fact table (fact_trips) connected to dimension tables for City, Date, and Repeat Trip Distribution, integrated with a secondary database for Monthly Targets.
+![Sample Image](./Images/Starschema.jpg)
+
 
 ## **``Key Insights ``**:
 - **The Tourism-Business Paradox**: Jaipur (77K trips) dominates volume but has low loyalty (25.7% RPR), while Surat (55K trips) has lower volume but leads the portfolio in loyalty (49.9% RPR).
